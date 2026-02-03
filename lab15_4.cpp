@@ -19,3 +19,27 @@ int main(){
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a,int &b, int &c,int &d){
+	int cash[] = {50,100,500,1000};
+	bool check[] = {1,1,1,1};
+	
+	int i = 0;
+	while(i < 4){
+		int ran_num = rand()%4 ;
+		if(check[ran_num]){
+			if(i == 0){
+				a = cash[ran_num];
+			} else if(i == 1){
+				b = cash[ran_num];
+			} else if(i == 2){
+				c = cash[ran_num];
+			} else if(i == 3){
+				d = cash[ran_num];
+			}
+		}
+		check[ran_num] = 0;
+		i++;
+
+	}
+}
